@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1 class="center">Argus Alerts</h1>
+
+<h2 class="center">Gun Alerts:</h2>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="css/account-style.css">
+    <title>Argus Security</title>
+</head>
+
+
+
+<body>
+
+    <nav id="overlay">
+        <img src="imgs/close.png" class="close-menu-button" id="close-menu">
+
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+                <span>Home Page</span>
+            </li>
+            <li>
+                <a href="#">Login/Register</a>
+                <span>Login/Register in order to connect and monitor cameras</span>
+            </li>
+            <li>
+                <a href="account.html">Your Account</a>
+                <span>View your cameras and your account</span>
+            </li>
+            <li>
+                <a href="aboutus.html">Contact Us</a>
+                <span></span>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <img src="imgs/logo.png" class="logo">
+        <img src="imgs/menu.png" class="menu-button" id="open-menu">
+
+    </header>
+
+
+
+    <div class="content">
+        <button type="button" class="collapsible">Open Section </button>
+    </div>
+
+
+
+    <button type="button" class="collapsible">ALERT:               2/23/2020</button>
+    <div class="a">
+        <img src="imgs/gun.png" alt="gunjesh" style="width:auto;height:50vh;" class="gun">
+        <center>Gun has been detected</center>
+        <b>Lat: 37.78752377224644 Long: -122.41100281215463</b>
+    </div>
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+
+
+    <script src="animation.js"></script>
+</body>
+
+</html>
